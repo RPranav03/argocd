@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: argocd
+  namespace: argocd
+spec:
+  selector:
+    app: argocd-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
