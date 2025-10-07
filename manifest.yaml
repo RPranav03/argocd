@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argocd-nginx
+  name: nginx
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/RPranav03/argocd.git
     targetRevision: HEAD
-    path: nginx 
+    path: default
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
@@ -16,5 +16,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-
-
