@@ -10,6 +10,8 @@ spec:
   selector:
     matchLabels:
       app: argocd-app
+  source:
+    repoURL: https://github.com/RPranav03/argocd.git
   template:
     metadata:
       labels:
@@ -20,4 +22,5 @@ spec:
           image: nginx:latest
           ports:
             - containerPort: 80
+
 
