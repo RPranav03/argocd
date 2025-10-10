@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/RPranav03/argocd/edit/main/manifest.yaml
     targetRevision: HEAD
-    path: nginx
+    path: .
 
   destination:
     server: https://kubernetes.default.svc
@@ -21,3 +21,4 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
+
